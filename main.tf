@@ -13,7 +13,6 @@ resource "aws_instance" "tfc-test" {
     vpc_security_group_ids = [
       "sg-056f0e13208015325"
     ]
-    associate_public_ip_address = true
     root_block_device {
         volume_type           = "gp2"
         volume_size           = 8
@@ -22,4 +21,6 @@ resource "aws_instance" "tfc-test" {
   tags = {
     "Name" = "tfc-test"
   }
+  ebs_optimized = true
+  monitoring = true
 }
