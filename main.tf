@@ -7,7 +7,7 @@ provider "aws" {
 resource "aws_instance" "tfc-test" {
     ami = var.images.us-east-2
     availability_zone = "us-east-2a"
-    instance_type = "t2.small"
+    instance_type = "t2.medium"
     key_name = "id_rsa_panw"
     subnet_id = "subnet-072efd16f0ae2f02c"
     vpc_security_group_ids = [
